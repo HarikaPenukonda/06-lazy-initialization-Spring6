@@ -14,6 +14,7 @@ public class DemoController {
     // define a private field for dependency
     @Autowired // Tell Spring to inject a dependency, optional if only one constructor
     public DemoController(@Qualifier("cricketCoach") Coach myCoach) {
+        System.out.println("In Constructor: " + getClass().getSimpleName());
         this.myCoach = myCoach;
     }
 
